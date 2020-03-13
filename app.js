@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
     }
 });
 
+<<<<<<< Updated upstream
 app.get('/', (req, res) => {
     try {
         res.render('gloves', {
@@ -39,6 +40,8 @@ app.get('/', (req, res) => {
     }
 });
 
+=======
+>>>>>>> Stashed changes
 
 
 app.listen(2002);
