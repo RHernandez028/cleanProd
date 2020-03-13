@@ -19,4 +19,26 @@ app.get('/', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    try {
+        res.render('gloves', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
+
+app.get('/', (req, res) => {
+    try {
+        res.render('handsan', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
+
+
+
 app.listen(2002);
