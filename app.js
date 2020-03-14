@@ -32,7 +32,8 @@ app.get('/gloves', (req, res) => {
 app.get('/hand-sanitizer', (req, res) => {
     try {
         res.render('handsan', {
-            
+            item: "Hand Sanitizer",
+
         })
     } catch (error) {
         
@@ -42,7 +43,7 @@ app.get('/hand-sanitizer', (req, res) => {
 app.get('/surgical-masks', (req, res) => {
     try {
         res.render('masks', {
-            
+            item: "Surgical Masks"
         })
     } catch (error) {
         
@@ -52,7 +53,7 @@ app.get('/surgical-masks', (req, res) => {
 app.get('/soap', (req, res) => {
     try {
         res.render('soap', {
-            
+            item: "Hand Soap"
         })
     } catch (error) {
         
@@ -61,8 +62,8 @@ app.get('/soap', (req, res) => {
 
 app.get('/spray', (req, res) => {
     try {
-        res.render('soap', {
-            
+        res.render('spray', {
+            item: "Lysol Spray"
         })
     } catch (error) {
         
@@ -72,7 +73,7 @@ app.get('/spray', (req, res) => {
 app.get('/wipes', (req, res) => {
     try {
         res.render('wipes', {
-            
+            item: "Lysol Wipes"
         })
     } catch (error) {
         
