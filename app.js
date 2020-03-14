@@ -1,11 +1,22 @@
+/*
+    Author: Emmanuel Cortes
+    Date: 3.13.20
+    File: app.js
+*/
+
+// Using NPM I installed ejs and express
 const express = require('express');
 const app = express();
 const path = require('path');
 const ejs = require('ejs');
+// For all static files they are to be stored in the public folder which was set by using the express.static('public')
 app.use(express.static('public'));
-// app.use(expressLayouts)
+
+// This app.set statement is setting ejs as the view engine
 app.set("view engine", "ejs");
+// All pages that are to be rendered will be stored in the 'views' folder
 app.set("views", path.join(__dirname, "views"));
+
 app.get('/', (req, res) => {
     try {
         res.render('index', {
@@ -13,6 +24,7 @@ app.get('/', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/gloves', (req, res) => {
     try {
         res.render('gloves', {
@@ -20,6 +32,7 @@ app.get('/gloves', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/hand-sanitizer', (req, res) => {
     try {
         res.render('handsan', {
@@ -29,6 +42,7 @@ app.get('/hand-sanitizer', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/surgical-masks', (req, res) => {
     try {
         res.render('masks', {
@@ -37,6 +51,7 @@ app.get('/surgical-masks', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/soap', (req, res) => {
     try {
         res.render('soap', {
@@ -45,6 +60,7 @@ app.get('/soap', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/spray', (req, res) => {
     try {
         res.render('spray', {
@@ -53,6 +69,7 @@ app.get('/spray', (req, res) => {
     } catch (error) {
     }
 });
+
 app.get('/wipes', (req, res) => {
     try {
         res.render('wipes', {
@@ -61,4 +78,6 @@ app.get('/wipes', (req, res) => {
     } catch (error) {
     }
 });
+
+
 app.listen(2002);
