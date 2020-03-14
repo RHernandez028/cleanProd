@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
+app.get('/gloves', (req, res) => {
     try {
         res.render('gloves', {
             
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
+app.get('/hand-sanitizer', (req, res) => {
     try {
         res.render('handsan', {
             
@@ -39,6 +39,44 @@ app.get('/', (req, res) => {
     }
 });
 
+app.get('/surgical-masks', (req, res) => {
+    try {
+        res.render('masks', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
 
+app.get('/soap', (req, res) => {
+    try {
+        res.render('soap', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
+
+app.get('/spray', (req, res) => {
+    try {
+        res.render('soap', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
+
+app.get('/wipes', (req, res) => {
+    try {
+        res.render('wipes', {
+            
+        })
+    } catch (error) {
+        
+    }
+});
 
 app.listen(2002);
