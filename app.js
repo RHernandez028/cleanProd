@@ -17,6 +17,7 @@ app.set("view engine", "ejs");
 // All pages that are to be rendered will be stored in the 'views' folder
 app.set("views", path.join(__dirname, "views"));
 
+// This app.get will be the home page and will render the index page as the main route
 app.get('/', (req, res) => {
     try {
         res.render('index', {
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
     }
 });
 
+// For every other app.get, the ending of the url will be the dedicated item, so for example if a user was wanting to go to the gloves page, at the end of the url the /gloves would have to be added. Inside the app.get res.render will render out the page from the views folder
 app.get('/gloves', (req, res) => {
     try {
         res.render('gloves', {
@@ -36,8 +38,6 @@ app.get('/gloves', (req, res) => {
 app.get('/hand-sanitizer', (req, res) => {
     try {
         res.render('handsan', {
-            item: "Hand Sanitizer",
-
         })
     } catch (error) {
     }
@@ -46,7 +46,6 @@ app.get('/hand-sanitizer', (req, res) => {
 app.get('/surgical-masks', (req, res) => {
     try {
         res.render('masks', {
-            item: "Surgical Masks"
         })
     } catch (error) {
     }
@@ -55,7 +54,6 @@ app.get('/surgical-masks', (req, res) => {
 app.get('/soap', (req, res) => {
     try {
         res.render('soap', {
-            item: "Hand Soap"
         })
     } catch (error) {
     }
@@ -64,7 +62,6 @@ app.get('/soap', (req, res) => {
 app.get('/spray', (req, res) => {
     try {
         res.render('spray', {
-            item: "Lysol Spray"
         })
     } catch (error) {
     }
@@ -73,7 +70,6 @@ app.get('/spray', (req, res) => {
 app.get('/wipes', (req, res) => {
     try {
         res.render('wipes', {
-            item: "Lysol Wipes"
         })
     } catch (error) {
     }
